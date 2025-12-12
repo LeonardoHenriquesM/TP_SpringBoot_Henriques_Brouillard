@@ -15,11 +15,11 @@ mvn spring-boot:run
 
 ### auteurs
 
-- `GET /auteurs`
-- `GET /auteurs/{identifiant}`
-- `POST /auteurs`
-- `PUT /auteurs/{identifiant}`
-- `DELETE /auteurs/{identifiant}`
+- `GET http://localhost:8080/auteurs`
+- `GET http://localhost:8080/auteurs/id`
+- `POST http://localhost:8080/auteurs`
+- `PUT http://localhost:8080/auteurs/id`
+- `DELETE http://localhost:8080/auteurs/id`
 
 ### les livres
  `GET /livres` avec filtres :
@@ -31,15 +31,15 @@ mvn spring-boot:run
   - `anneeMax`
   - pages et tri classique : `page`, `size`, `sort=anneeParution,desc`…
 
-- `GET /livres/{identifiant}`
-- `POST /livres`
-- `PUT /livres/{identifiant}`
-- `DELETE /livres/{identifiant}`
+- `GET http://localhost:8080/livres/id`
+- `POST http://localhost:8080/livres`
+- `PUT http://localhost:8080/livres/id`
+- `DELETE http://localhost:8080/livres/id`
 
 ### stats
 
-- `GET /statistiques/livres-par-categorie`
-- `GET /statistiques/top-auteurs?limite=3`
+- `GET http://localhost:8080/statistiques/livres_par_categorie`
+- `GET http://localhost:8080/statistiques/top-auteurs`
 
 ## cle pour l'api
 
