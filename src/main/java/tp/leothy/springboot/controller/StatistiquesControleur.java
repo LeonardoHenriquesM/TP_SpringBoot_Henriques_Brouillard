@@ -19,7 +19,7 @@ public class StatistiquesControleur {
         this.serviceStatistiques = serviceStatistiques;
     }
 
-    @GetMapping("/livres-par-categorie")
+    @GetMapping("/livres_par_categorie")
     public Map<String, Long> livresParCategorie() {
         return serviceStatistiques.compterLivresParCategorie();
     }
