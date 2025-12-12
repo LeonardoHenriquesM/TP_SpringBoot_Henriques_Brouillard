@@ -46,7 +46,7 @@ mvn spring-boot:run
 toutes les requêtes **POST / PUT / PATCH / DELETE** vont demander cet en-tête pour la vérification :
 
 ```http
-cle_api: trop_style
+Dans postman aller dans headers et mettre Key = cle_api et Value = trop_style
 ```
 
 vous pouvez changer le nom de la cle dans `application.properties` :
