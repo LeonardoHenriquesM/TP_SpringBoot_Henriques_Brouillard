@@ -50,7 +50,7 @@ public class AuteurControleur {
         serviceAuteur.supprimer(identifiant);
 
         Map<String, String> reponse = new HashMap<>();
-        reponse.put("message", "Auteur supprimé avec succès.");
+        reponse.put("message", "Auteur supprimé");
         return ResponseEntity.ok(reponse);
     }
 
