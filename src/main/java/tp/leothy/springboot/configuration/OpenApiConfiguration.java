@@ -13,12 +13,12 @@ public class OpenApiConfiguration {
 
     @Bean
     public OpenAPI apiBibliotheque() {
-        final String cleApiNom = "X-CLE-API";
+        final String cleApiNom = "cle_api";
 
         return new OpenAPI()
                 .info(new Info()
-                        .title("API Bibliothèque (FR, tp.leothy.springboot)")
-                        .description("TP Spring Boot - API REST de gestion de bibliothèque (full FR, Lombok).")
+                        .title("API springboot")
+                        .description("TP Spring Boot")
                         .version("1.0.0"))
                 .addSecurityItem(new SecurityRequirement().addList(cleApiNom))
                 .components(new Components()

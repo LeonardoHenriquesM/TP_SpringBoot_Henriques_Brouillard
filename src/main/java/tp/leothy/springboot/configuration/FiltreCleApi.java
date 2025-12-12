@@ -34,12 +34,12 @@ public class FiltreCleApi extends OncePerRequestFilter {
             return;
         }
 
-        String cleRecu = requete.getHeader("X-CLE-API");
+        String cleRecu = requete.getHeader("cle_api");
 
         if (cleRecu == null || !cleRecu.equals(cleApiAttendue)) {
             reponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             reponse.setContentType(MediaType.APPLICATION_JSON_VALUE);
-            reponse.getWriter().write("{\"message\":\"Clé API manquante ou invalide.\"}");
+            reponse.getWriter().write("{\"message\":\"T'as oublié la cle ou elle est pas bonne.\"}");
             return;
         }
 
