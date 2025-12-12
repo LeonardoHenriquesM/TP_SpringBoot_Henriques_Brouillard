@@ -1,9 +1,6 @@
 # TP_SpringBoot_Henriques_Brouillard (tp.leothy.springboot)
 
-Projet de TP Spring Boot pour gérer une **bibliothèque** (auteurs + livres)  
-avec **tout le code en français** et **Lombok**, package racine `tp.leothy.springboot`.
-
-## Lancer l'application
+## pour lancer l'appli (je rapelle même si vous le savez déjà)
 
 ```bash
 mvn spring-boot:run
@@ -14,9 +11,9 @@ mvn spring-boot:run
 - Console H2 : `http://localhost:8080/h2-console`  
   (JDBC URL : `jdbc:h2:mem:bibliotheque-db`)
 
-## Endpoints principaux
+## les endpoints
 
-### Auteurs
+### auteurs
 
 - `GET /auteurs`
 - `GET /auteurs/{identifiant}`
@@ -24,47 +21,48 @@ mvn spring-boot:run
 - `PUT /auteurs/{identifiant}`
 - `DELETE /auteurs/{identifiant}`
 
-### Livres
-
-- `GET /livres` avec filtres :
+### les livres
+ `GET /livres` avec filtres :
 
   - `titre`
   - `identifiantAuteur`
   - `categorie` (`ROMAN`, `ESSAI`, `POESIE`, `AUTRE`)
   - `anneeMin`
   - `anneeMax`
-  - pagination / tri standard : `page`, `size`, `sort=anneeParution,desc`…
+  - pages et tri classique : `page`, `size`, `sort=anneeParution,desc`…
 
 - `GET /livres/{identifiant}`
 - `POST /livres`
 - `PUT /livres/{identifiant}`
 - `DELETE /livres/{identifiant}`
 
-### Statistiques
+### stats
 
 - `GET /statistiques/livres-par-categorie`
 - `GET /statistiques/top-auteurs?limite=3`
 
-## Clé d'API
+## cle pour l'api
 
-Toutes les requêtes **POST / PUT / PATCH / DELETE** exigent l'en-tête :
+toutes les requêtes **POST / PUT / PATCH / DELETE** vont demander cet en-tête pour la vérification :
 
 ```http
-X-CLE-API: MA_SUPER_CLE_API_FR
+X-CLE-API: trop_style
 ```
 
-Valeur configurable dans `application.properties` :
+vous pouvez changer le nom de la cle dans `application.properties` :
 
 ```properties
-application.cle-api=MA_SUPER_CLE_API_FR
+application.cle-api=trop_style
 ```
 
-## Lombok
+## lombok
 
-Les classes de modèle et les DTO utilisent Lombok (`@Data`, `@Builder`, etc.)  
-pour éviter le code répétitif (getters / setters / constructeurs).
+Les classes/DTO utilisent Lombok (`@Data`, `@Builder`, etc.) je sais plus si c'était demandé mais j'aime bien l'utiliser ça mévite de réecrire touts les getters et setters et les builders etc ..
 
-## Doc des annotations
+## doc avec les explications de chaque annotation
 
-Voir `docs/annotations_spring_lombok_fr.md` pour une explication claire
-de toutes les annotations `@...` utilisées dans le projet.
+Dans `docs/annotations_springb.md` je me suis aidé de l'ia et des docs officielles: 
+
+python(Python – Decorators & Annotations)
+java(Java – Annotations)
+Jakarta EE(Jakarta EE (anciennement Java EE) – Annotations pour frameworks)
